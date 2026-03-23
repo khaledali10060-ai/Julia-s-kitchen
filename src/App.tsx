@@ -249,6 +249,7 @@ export default function App() {
                   alt="Truffle Mushroom Pizza" 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   referrerPolicy="no-referrer"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
@@ -269,6 +270,7 @@ export default function App() {
                   alt="Tenderloin Steak" 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   referrerPolicy="no-referrer"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
@@ -289,6 +291,7 @@ export default function App() {
                   alt="Chicken Alfredo Pasta" 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   referrerPolicy="no-referrer"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
@@ -320,6 +323,7 @@ export default function App() {
                       alt={category.category} 
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                       referrerPolicy="no-referrer"
+                      loading="lazy"
                     />
                     <div className="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-2xl"></div>
                   </div>
@@ -370,22 +374,22 @@ export default function App() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             <div className="lg:col-span-2 lg:row-span-2 relative rounded-2xl overflow-hidden group shadow-lg">
-              <img src={IMAGES.interior} alt="Interior" className="w-full h-full object-cover aspect-video lg:aspect-auto transition-transform duration-700 group-hover:scale-105" referrerPolicy="no-referrer" />
+              <img src={IMAGES.interior} alt="Interior" className="w-full h-full object-cover aspect-video lg:aspect-auto transition-transform duration-700 group-hover:scale-105" referrerPolicy="no-referrer" loading="lazy" />
               <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                 <span className="text-white font-medium tracking-wider uppercase bg-black/50 px-6 py-2 rounded-full backdrop-blur-sm">Elegant Interior</span>
               </div>
             </div>
             <div className="relative rounded-2xl overflow-hidden group shadow-lg">
-              <img src={IMAGES.spread} alt="Food Spread" className="w-full h-full object-cover aspect-square transition-transform duration-700 group-hover:scale-105" referrerPolicy="no-referrer" />
+              <img src={IMAGES.spread} alt="Food Spread" className="w-full h-full object-cover aspect-square transition-transform duration-700 group-hover:scale-105" referrerPolicy="no-referrer" loading="lazy" />
             </div>
             <div className="relative rounded-2xl overflow-hidden group shadow-lg">
-              <img src={IMAGES.mixedGrill} alt="Mixed Grill" className="w-full h-full object-cover aspect-square transition-transform duration-700 group-hover:scale-105" referrerPolicy="no-referrer" />
+              <img src={IMAGES.mixedGrill} alt="Mixed Grill" className="w-full h-full object-cover aspect-square transition-transform duration-700 group-hover:scale-105" referrerPolicy="no-referrer" loading="lazy" />
             </div>
             <div className="relative rounded-2xl overflow-hidden group shadow-lg">
-              <img src={IMAGES.vineLeaves} alt="Vine Leaves" className="w-full h-full object-cover aspect-square transition-transform duration-700 group-hover:scale-105" referrerPolicy="no-referrer" />
+              <img src={IMAGES.vineLeaves} alt="Vine Leaves" className="w-full h-full object-cover aspect-square transition-transform duration-700 group-hover:scale-105" referrerPolicy="no-referrer" loading="lazy" />
             </div>
             <div className="lg:col-span-2 relative rounded-2xl overflow-hidden group shadow-lg">
-              <img src={IMAGES.pasta} alt="Pasta" className="w-full h-full object-cover aspect-[2/1] transition-transform duration-700 group-hover:scale-105" referrerPolicy="no-referrer" />
+              <img src={IMAGES.pasta} alt="Pasta" className="w-full h-full object-cover aspect-[2/1] transition-transform duration-700 group-hover:scale-105" referrerPolicy="no-referrer" loading="lazy" />
             </div>
           </div>
         </div>
@@ -624,7 +628,7 @@ export default function App() {
             <div className="flex items-center gap-4 md:gap-6">
               <div className="w-20 h-20 md:w-24 md:h-24 rounded-full p-1 bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-500 flex-shrink-0">
                 <div className="w-full h-full bg-white rounded-full p-1">
-                  <img src={IMAGES.logo} alt="Julia's Kitchen" className="w-full h-full object-contain rounded-full" />
+                  <img src={IMAGES.logo} alt="Julia's Kitchen" className="w-full h-full object-contain rounded-full" loading="lazy" />
                 </div>
               </div>
               <div>
@@ -670,6 +674,7 @@ export default function App() {
                   alt={`Instagram post ${index + 1}`} 
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   referrerPolicy="no-referrer"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-colors duration-300 flex items-center justify-center gap-6 opacity-0 group-hover:opacity-100">
                   <div className="flex items-center gap-2 text-white font-bold">
@@ -692,7 +697,7 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-center md:text-left flex flex-col items-center md:items-start">
             <div className="flex items-center gap-3 mb-3">
-              <img src={IMAGES.logo} alt="Julia's Kitchen Logo" className="h-14 w-auto object-contain bg-white/90 rounded-lg p-1" referrerPolicy="no-referrer" />
+              <img src={IMAGES.logo} alt="Julia's Kitchen Logo" className="h-14 w-auto object-contain bg-white/90 rounded-lg p-1" referrerPolicy="no-referrer" loading="lazy" />
               <h2 className="font-serif text-2xl font-bold text-white">
                 Julia's <span className="text-yellow-600">Kitchen</span>
               </h2>
