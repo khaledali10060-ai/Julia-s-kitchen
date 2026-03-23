@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, X, MapPin, Phone, Clock, Star, Facebook, Instagram, MessageCircle, ChevronRight, UtensilsCrossed } from 'lucide-react';
+import { Menu, X, MapPin, Phone, Clock, Star, Facebook, Instagram, MessageCircle, ChevronRight, UtensilsCrossed, Heart } from 'lucide-react';
 import Chatbot from './components/Chatbot';
 
 const IMAGES = {
@@ -77,6 +77,19 @@ export default function App() {
     <div className="min-h-screen bg-[#FAFAFA] text-gray-800 font-sans selection:bg-yellow-200">
       {/* Navigation */}
       <nav className="fixed w-full z-50 bg-white/95 backdrop-blur-sm shadow-sm transition-all duration-300">
+        {/* Announcement Bar */}
+        <div className="bg-yellow-600 text-white py-2 text-sm font-medium tracking-wide overflow-hidden flex whitespace-nowrap">
+          <div className="animate-marquee flex whitespace-nowrap">
+            <span className="px-8">🎉 Enjoy a 15% discount on breakfast daily from 9 AM to 12 PM!</span>
+            <span className="px-8">🎉 Enjoy a 15% discount on breakfast daily from 9 AM to 12 PM!</span>
+            <span className="px-8">🎉 Enjoy a 15% discount on breakfast daily from 9 AM to 12 PM!</span>
+            <span className="px-8">🎉 Enjoy a 15% discount on breakfast daily from 9 AM to 12 PM!</span>
+            <span className="px-8">🎉 Enjoy a 15% discount on breakfast daily from 9 AM to 12 PM!</span>
+            <span className="px-8">🎉 Enjoy a 15% discount on breakfast daily from 9 AM to 12 PM!</span>
+            <span className="px-8">🎉 Enjoy a 15% discount on breakfast daily from 9 AM to 12 PM!</span>
+            <span className="px-8">🎉 Enjoy a 15% discount on breakfast daily from 9 AM to 12 PM!</span>
+          </div>
+        </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             <div className="flex-shrink-0 flex items-center cursor-pointer" onClick={() => scrollToSection('home')}>
@@ -252,7 +265,7 @@ export default function App() {
               </div>
               <div className="h-64 overflow-hidden relative">
                 <img 
-                  src={IMAGES.mixedGrill} 
+                  src="https://i.postimg.cc/zDwhTzHT/tndwr.jpg" 
                   alt="Tenderloin Steak" 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   referrerPolicy="no-referrer"
@@ -272,7 +285,7 @@ export default function App() {
               </div>
               <div className="h-64 overflow-hidden relative">
                 <img 
-                  src={IMAGES.pasta} 
+                  src="https://i.postimg.cc/Fz1QFFMY/bsta.jpg" 
                   alt="Chicken Alfredo Pasta" 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   referrerPolicy="no-referrer"
@@ -600,6 +613,76 @@ export default function App() {
                 افتح في تطبيق الخرائط
               </a>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Instagram Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between mb-12 gap-6" dir="rtl">
+            <div className="flex items-center gap-4 md:gap-6">
+              <div className="w-20 h-20 md:w-24 md:h-24 rounded-full p-1 bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-500 flex-shrink-0">
+                <div className="w-full h-full bg-white rounded-full p-1">
+                  <img src={IMAGES.logo} alt="Julia's Kitchen" className="w-full h-full object-contain rounded-full" />
+                </div>
+              </div>
+              <div>
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">@juliaskitchen_eg</h2>
+                <div className="flex gap-4 md:gap-6 text-sm md:text-base text-gray-600">
+                  <p><span className="font-bold text-gray-900">342</span> منشور</p>
+                  <p><span className="font-bold text-gray-900">12.5k</span> متابع</p>
+                  <p><span className="font-bold text-gray-900">104</span> يتابع</p>
+                </div>
+              </div>
+            </div>
+            <a 
+              href="https://www.instagram.com/juliaskitchen_eg/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors flex items-center gap-2 shadow-md hover:shadow-lg whitespace-nowrap"
+            >
+              <Instagram size={20} />
+              تابعنا على إنستجرام
+            </a>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4">
+            {[
+              { img: "https://i.postimg.cc/zDwhTzHT/tndwr.jpg", likes: "1.2k", comments: "84" },
+              { img: "https://i.postimg.cc/Fz1QFFMY/bsta.jpg", likes: "856", comments: "42" },
+              { img: IMAGES.pizza, likes: "2.1k", comments: "156" },
+              { img: IMAGES.samosa, likes: "943", comments: "67" },
+              { img: IMAGES.vineLeaves, likes: "1.5k", comments: "112" },
+              { img: IMAGES.mixedGrill, likes: "632", comments: "28" },
+              { img: IMAGES.spread, likes: "1.1k", comments: "93" },
+              { img: IMAGES.interior, likes: "789", comments: "51" }
+            ].map((post, index) => (
+              <a 
+                key={index}
+                href="https://www.instagram.com/juliaskitchen_eg/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative aspect-square bg-gray-200 overflow-hidden block rounded-xl shadow-sm hover:shadow-md transition-shadow"
+              >
+                <img 
+                  src={post.img} 
+                  alt={`Instagram post ${index + 1}`} 
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  referrerPolicy="no-referrer"
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-colors duration-300 flex items-center justify-center gap-6 opacity-0 group-hover:opacity-100">
+                  <div className="flex items-center gap-2 text-white font-bold">
+                    <Heart className="fill-white" size={24} />
+                    <span>{post.likes}</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-white font-bold">
+                    <MessageCircle className="fill-white" size={24} />
+                    <span>{post.comments}</span>
+                  </div>
+                </div>
+              </a>
+            ))}
           </div>
         </div>
       </section>
